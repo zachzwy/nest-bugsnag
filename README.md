@@ -5,9 +5,10 @@
  <p align="center">A Nest module wrapper for bugsnag logger.</p>
  
 <p align="center">
-<a href="https://github.com/nkaurelien/nest-bugsnag"><img src="https://img.shields.io/npm/v/nest-bugsnag.svg" alt="NPM Version" /></a>
+
+<a href="https://www.npmjs.com/package/@nkaurelien/nest-bugsnag"></a>
 <a href="https://github.com/nkaurelien/nest-bugsnag"><img src="https://img.shields.io/npm/l/nest-bugsnag.svg" alt="Package License" /></a>
-<a href="https://github.com/nkaurelien/nest-bugsnag"><img src="https://img.shields.io/npm/dm/nest-bugsnag.svg" alt="NPM Downloads" /></a>
+<a href="https://github.com/nkaurelien/nest-bugsnag"></a>
 </p>
 
 ## Description
@@ -69,8 +70,7 @@ Note that `BugsnagModule` is a global module, it will be available in all you fe
 
 ```typescript
 import { Module } from '@nestjs/common';
-import { BugsnagModule } from 'nest-bugsnag';
-import { ConfigService } from 'nest-config';
+import { BugsnagModule } from '@nkaurelien/nest-bugsnag';
 
 @Module({
   imports: [
