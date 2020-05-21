@@ -1,12 +1,13 @@
-import { Config, Client } from '@bugsnag/node';
+import {Client, Config} from '@bugsnag/node';
 
-export class BugsnagClient extends Client {}
+export class BugsnagClient extends Client {
+}
 
 export type BugsnagModuleOptions = string | Config;
 
 export interface BugsnagModuleAsyncOptions {
-  useFactory: (
-    ...args: any[]
-  ) => Promise<BugsnagModuleOptions> | BugsnagModuleOptions;
-  inject?: any[];
+    useFactory: (
+        ...args: any[]
+    ) => Promise<BugsnagModuleOptions> | BugsnagModuleOptions;
+    inject?: any[];
 }
