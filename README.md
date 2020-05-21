@@ -18,7 +18,7 @@ A [Nest](https://github.com/nestjs/nest) module wrapper for [bugsnag-js](https:/
 ## Installation
 
 ```bash
-$ npm i nest-bugsnag --save
+$ npm i @nkaurelien/nest-bugsnag --save
 ```
 
 ## Publish to npm
@@ -34,7 +34,7 @@ Import the `BugsnagModule` into the module. For example `AppModule`:
 
 ```typescript
 import { Module } from '@nestjs/common';
-import { BugsnagModule } from 'nest-bugsnag';
+import { BugsnagModule } from '@nkaurelien/nest-bugsnag';
 
 @Module({
   imports: [
@@ -50,7 +50,7 @@ Then you can inject BugsnagService. Example:
 
 ```typescript
 import { Controller } from '@nestjs/common';
-import { BugsnagService } from 'nest-bugsnag';
+import { BugsnagService } from '@nkaurelien/nest-bugsnag';
 
 @Controller('cats')
 export class CatsController {
