@@ -6,9 +6,10 @@
  
 <p align="center">
 
-<a href="https://www.npmjs.com/package/@nkaurelien/nest-bugsnag"></a>
-<a href="https://github.com/nkaurelien/nest-bugsnag"><img src="https://img.shields.io/npm/l/nest-bugsnag.svg" alt="Package License" /></a>
-<a href="https://github.com/nkaurelien/nest-bugsnag"></a>
+<a href="https://www.npmjs.com/package/@nkaurelien/nest-bugsnag"><img src="https://img.shields.io/npm/v/@nkaurelien/nest-bugsnag.svg" alt="NPM Version" /></a>
+<a href="https://github.com/nkaurelien/nest-bugsnag"><img src="https://img.shields.io/npm/l/@nkaurelien/nest-bugsnag.svg" alt="Package License" /></a>
+<a href="https://twitter.com/AstridNkumbe"><img src="https://img.shields.io/twitter/follow/AstridNkumbe.svg?style=social&label=Follow"></a>
+
 </p>
 
 ## Description
