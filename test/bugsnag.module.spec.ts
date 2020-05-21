@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { BugsnagModule, BugsnagService } from '../src';
-import { BUGSNAG_MODULE_PROVIDER } from '../src/bugsnag.constants';
+import { BUGSNAG_SERVICE_PROVIDER } from '../src/bugsnag.constants';
 
 describe('Bugsnag Module', () => {
 
@@ -11,7 +11,7 @@ describe('Bugsnag Module', () => {
       })],
     }).compile();
 
-    const provider = moduleFixture.get<BugsnagService>(BUGSNAG_MODULE_PROVIDER);
+    const provider = moduleFixture.get<BugsnagService>(BUGSNAG_SERVICE_PROVIDER);
     expect(provider).toBeInstanceOf(BugsnagService);
     expect(provider).toHaveProperty('instance');
     expect(provider.instance).toBeDefined();
@@ -28,7 +28,7 @@ describe('Bugsnag Module', () => {
       })],
     }).compile();
 
-    const provider = moduleFixture.get<BugsnagService>(BUGSNAG_MODULE_PROVIDER);
+    const provider = moduleFixture.get<BugsnagService>(BUGSNAG_SERVICE_PROVIDER);
     expect(provider).toBeInstanceOf(BugsnagService);
     expect(provider).toHaveProperty('instance');
     expect(provider.instance).toBeDefined();

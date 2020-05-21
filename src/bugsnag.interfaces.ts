@@ -1,8 +1,8 @@
-import { Bugsnag } from '@bugsnag/js';
+import { Config, Client } from '@bugsnag/node';
 
-export interface BugsnagClientInterface extends Bugsnag.Client {}
+export class BugsnagClient extends Client {}
 
-export type BugsnagModuleOptions = string | Bugsnag.IConfig;
+export type BugsnagModuleOptions = string | Config;
 
 export interface BugsnagModuleAsyncOptions {
   useFactory: (
