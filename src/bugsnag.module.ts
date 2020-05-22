@@ -2,12 +2,13 @@ import {DynamicModule, Global, Module} from '@nestjs/common';
 
 import {BugsnagModuleAsyncOptions, BugsnagModuleOptions} from './bugsnag.interfaces';
 import {createBugsnagAsyncProviders, createBugsnagProviders} from './bugsnag.providers';
+import {BugsnagLogger} from "./bugsnag.logger";
 
 @Global()
 @Module({})
 export class BugsnagModule {
     static forRoot(options: BugsnagModuleOptions): DynamicModule {
-        const providers = createBugsnagProviders(options);
+        const providers = [BugsnagLogger, ...createBugsnagProviders(options)];
 
         return {
             module: BugsnagModule,
@@ -17,7 +18,7 @@ export class BugsnagModule {
     }
 
     static forRootAsync(options: BugsnagModuleAsyncOptions): DynamicModule {
-        const providers = createBugsnagAsyncProviders(options);
+        const providers = [BugsnagLogger, ...createBugsnagAsyncProviders(options)];
 
         return {
             module: BugsnagModule,

@@ -26,6 +26,7 @@ $ npm i @nkaurelien/nest-bugsnag --save
 ## Publish to npm
 ```bash
 $ npm run clean:build
+$ cd dist
 $ npm publish
 ```
 
