@@ -19,14 +19,8 @@ A [Nest](https://github.com/nestjs/nest) module wrapper for [bugsnag-js](https:/
 ## Installation
 
 ```bash
+$ npm i @bugsnag/plugin-express --save
 $ npm i @nkaurelien/nest-bugsnag --save
-```
-
-## Publish to npm
-```bash
-$ npm run clean:build
-$ cd dist
-$ npm publish
 ```
 
 ## Quick Start
@@ -36,15 +30,33 @@ Import the `BugsnagModule` into the module. For example `AppModule`:
 ```typescript
 import { Module } from '@nestjs/common';
 import { BugsnagModule } from '@nkaurelien/nest-bugsnag';
+import BugsnagPluginExpress from '@bugsnag/plugin-express'
+
 
 @Module({
   imports: [
     BugsnagModule.forRoot({
-      // options
-    }),
+          apiKey: '<API_KEY>',
+          plugins: [BugsnagPluginExpress],
+      }),
   ],
 })
 export class AppModule { }
+```
+
+In the **main.ts** file, change the HTTP platform to use express
+
+```typescript
+// change
+const app = await NestFactory.create(AppModule);
+// to
+const app = await NestFactory.create<NestExpressApplication>(AppModule);
+```
+
+This handles any errors that Express catches  
+
+```typescript
+app.get(BugsnagService).handleAnyErrors(app);
 ```
 
 Then you can inject BugsnagService. Example:
@@ -62,10 +74,27 @@ export class CatsController {
 BugsnagService has instance property which wrap bugsnag client. So you can access it by calling:
 
 ```typescript
-this.logger.instance.notify('message');
+try {
+  something.risky()
+} catch (e) {
+    this.logger.instance.notify('message');
+}
 ```
-
+ In your controller, you can call req.bugsnag.notify(err)  which will include information about the request in the error report. For example:
+ 
+```typescript
+ @Get()
+ getHello(@Request() req): string {
+     req.bugsnag.notify(
+         new Error('First Error'),
+         function (event) {
+             // event.addMetadata('product', product)
+         });
+     return 'Hello World!';
+ }
+```
 Note that `BugsnagModule` is a global module, it will be available in all you feature modules.
+
 
 ## Async configuration Sample
 
@@ -87,6 +116,7 @@ export class AppModule { }
 ```
 
 The factory might be async and is able to inject dependencies through the `inject` option.
+
 
 ## Keywords
 bugsnagJs, nestJs, logger
