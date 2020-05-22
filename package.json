@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@bugsnag/js": "^7.1.0",
+    "@bugsnag/plugin-express": "^7.1.0",
     "@nestjs/common": "^6.11.11",
     "@nestjs/core": "^6.11.11",
     "@nestjs/platform-express": "^6.11.11",
@@ -50,7 +51,9 @@
   },
   "peerDependencies": {
     "@bugsnag/js": "^7.1.0",
+    "@bugsnag/plugin-express": "^7.1.0",
     "@nestjs/common": "^6.11.11",
+    "@nestjs/platform-express": "^6.11.11",
     "reflect-metadata": "0.1.13",
     "rxjs": "^6.5.5"
   }
