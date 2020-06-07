@@ -18,7 +18,7 @@ export class BugsnagService {
         }
     }
 
-    handleAnyErrors(app: NestExpressApplication): any {
+    handleAnyErrors(app: NestExpressApplication | any): any {
         if (!this._instance) {
             console.log('Bugsnag not started');
             return;
