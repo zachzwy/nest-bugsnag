@@ -27,7 +27,17 @@ $ npm i @nkaurelien/nest-bugsnag --save
 ```bash
 $ npm run clean:build
 $ cd dist
+$ npm version patch
 $ npm publish
+```
+
+Updating your published package version number
+To change the version number in package.json, on the command line, in the package root directory, run the following command, replacing <update_type> with one of the semantic versioning release types (patch, major, or minor):
+Run npm publish.
+
+```bash
+# update_type is patch, major, or minor
+$ npm version <update_type>
 ```
 
 You need login once before publish 
