@@ -7,6 +7,9 @@
     "bugsnag",
     "logger"
   ],
+  "engines": {
+    "node": "12.x"
+  },
   "type": "git",
   "url": "https://github.com/nkaurelien/nest-bugsnag",
   "homepage": "https://github.com/nkaurelien/nest-bugsnag",
