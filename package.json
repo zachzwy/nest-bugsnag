@@ -1,6 +1,6 @@
 {
   "name": "@nkaurelien/nest-bugsnag",
-  "version": "6.0.3",
+  "version": "6.1.0",
   "description": "A Nest module wrapper for bugsnag",
   "keywords": [
     "nestjs",
