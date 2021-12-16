@@ -8,7 +8,6 @@
 
 <a href="https://www.npmjs.com/package/@zachzwy/nest-bugsnag"><img src="https://img.shields.io/npm/v/@zachzwy/nest-bugsnag.svg" alt="NPM Version" /></a>
 <a href="https://github.com/zachzwy/nest-bugsnag"><img src="https://img.shields.io/npm/l/@zachzwy/nest-bugsnag.svg" alt="Package License" /></a>
-<a href="https://twitter.com/AstridNkumbe"><img src="https://img.shields.io/twitter/follow/AstridNkumbe.svg?style=social&label=Follow"></a>
 
 </p>
 
