@@ -1,5 +1,4 @@
 import { Provider } from "@nestjs/common";
-
 import {
   BUGSNAG_MODULE_OPTIONS,
   BUGSNAG_SERVICE_PROVIDER,

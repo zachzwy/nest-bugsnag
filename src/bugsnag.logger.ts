@@ -34,9 +34,3 @@ export class BugsnagLogger extends Logger implements LoggerService {
     super.error(message);
   }
 }
-
-// const debug = require('debug')('main.ts')
-// debug('serviceAccount %s', serviceAccount)
-
-// const winston = require('winston');
-// winston.log('info', 'serviceAccount', serviceAccount);
