@@ -1,6 +1,6 @@
 {
-  "name": "@nkaurelien/nest-bugsnag",
-  "version": "6.1.0",
+  "name": "@zachzwy/nest-bugsnag",
+  "version": "7.0.0",
   "description": "A Nest module wrapper for bugsnag",
   "keywords": [
     "nestjs",
@@ -8,17 +8,17 @@
     "logger"
   ],
   "engines": {
-    "node": "12.x"
+    "node": "16.x"
   },
   "type": "git",
-  "url": "https://github.com/nkaurelien/nest-bugsnag",
-  "homepage": "https://github.com/nkaurelien/nest-bugsnag",
+  "url": "https://github.com/zachzwy/nest-bugsnag",
+  "homepage": "https://github.com/zachzwy/nest-bugsnag",
   "bugs": {
-    "url": "https://github.com/nkaurelien/nest-bugsnag/issues"
+    "url": "https://github.com/zachzwy/nest-bugsnag/issues"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "author": "Nkaurelien Kamitbrains",
+  "author": "wenyu zhang",
   "license": "MIT",
   "scripts": {
     "clean:build": "npm run clean && npm run build",
@@ -32,32 +32,21 @@
     "access": "public"
   },
   "dependencies": {
-    "@bugsnag/js": "^7.1.0",
-    "@bugsnag/plugin-express": "^7.1.0",
-    "@nestjs/common": "^6.11.11",
-    "@nestjs/core": "^6.11.11",
-    "@nestjs/platform-express": "^6.11.11",
-    "reflect-metadata": "^0.1.13",
-    "rimraf": "^2.7.1",
-    "rxjs": "^6.5.5"
+    "@bugsnag/js": "^7.14.1",
+    "@bugsnag/node": "^7.14.1",
+    "@nestjs/common": "^8.0.0",
+    "@nestjs/platform-express": "^8.0.0",
+    "reflect-metadata": "0.1.13"
   },
   "devDependencies": {
-    "@nestjs/testing": "6.5.3",
-    "@types/jest": "^24.9.1",
+    "@nestjs/testing": "^8.0.0",
+    "@types/jest": "^27.0.3",
     "@types/supertest": "^2.0.9",
-    "jest": "^24.9.0",
-    "nodemon": "^1.19.4",
+    "jest": "^27.4.5",
+    "nodemon": "^2.0.15",
     "supertest": "^4.0.2",
-    "ts-jest": "^24.3.0",
+    "ts-jest": "^27.1.1",
     "ts-node": "^8.10.1",
     "typescript": "3.4.5"
-  },
-  "peerDependencies": {
-    "@bugsnag/js": "^7.1.0",
-    "@bugsnag/plugin-express": "^7.1.0",
-    "@nestjs/common": "^6.11.11",
-    "@nestjs/platform-express": "^6.11.11",
-    "reflect-metadata": "0.1.13",
-    "rxjs": "^6.5.5"
   }
 }
